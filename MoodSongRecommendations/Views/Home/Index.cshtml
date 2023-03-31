@@ -1,0 +1,36 @@
+﻿@model MoodSongRecommendations.Models.IndexModel
+
+
+<div class="container">
+    <h2>Hangi Moddasın?</h2>
+    <p>Bulunduğunuz moda göre ChatGPT şarkı önerilerinde bulunuyor ve bu önerilere göre Youtube videoları listeleniyor.</p>
+    <p>Modunuzu girin. Örnek: Mutlu, üzgün...</p>
+
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4">
+                    <input type="text" value="@Model.mod" class="form-control" id="mod" placeholder="Mod Durumunuz" name="mod">
+                </div>
+                <div class="col-sm-8">
+                    <b>moda en uygun şarkıları listeler misin?</b>
+                </div>
+            </div><br />
+            <div class="row">
+                <div class="col-sm-12">
+                    <button type="submit" id="btnOpenAIPrompt" class="btn btn-success btn-lg">Getir</button>
+                </div>
+            </div>
+        </div>
+</div>
+<br />
+<br />
+<div class="container">
+    <p id="presult"></p>
+</div>
+<div id="video">
+    
+</div>
+
+@section scripts{
+    <script src="~/js/openai.js"></script>
+}
